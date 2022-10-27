@@ -1,0 +1,13 @@
+<!ELEMENT Dealer (Manufacturers*)>
+        <!ELEMENT Manufacturers (Brands*)>
+        <!ELEMENT Brands (#PCDATA)>
+        <!ATTLIST Manufacturers
+                id ID #REQUIRED
+                name CDATA #REQUIRED
+                >
+        <!ATTLIST Brands
+                id ID #REQUIRED
+                manufacturersId IDREF #REQUIRED
+                name CDATA #REQUIRED
+                releaseYear CDATA #REQUIRED
+                >
